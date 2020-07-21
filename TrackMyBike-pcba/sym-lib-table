@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name TrackMyBike-pcba-rescue)(type Legacy)(uri ${KIPRJMOD}/TrackMyBike-pcba-rescue.lib)(options "")(descr ""))
+)
