@@ -1,0 +1,165 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 5
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 1500 1900 1550 1350
+U 5F16898F
+F0 "nRF9160" 50
+F1 "nRF9160.sch" 50
+$EndSheet
+$Sheet
+S 5450 2100 1350 1250
+U 5F16A6AE
+F0 "Power" 50
+F1 "power.sch" 50
+$EndSheet
+$Comp
+L Connector_Generic:Conn_01x02 J?
+U 1 1 5F18731B
+P 8900 1150
+F 0 "J?" H 8980 1142 50  0000 L CNN
+F 1 "Conn_01x02" H 8980 1051 50  0000 L CNN
+F 2 "" H 8900 1150 50  0001 C CNN
+F 3 "~" H 8900 1150 50  0001 C CNN
+	1    8900 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J?
+U 1 1 5F187BB9
+P 10350 1150
+F 0 "J?" H 10430 1142 50  0000 L CNN
+F 1 "Conn_01x02" H 10430 1051 50  0000 L CNN
+F 2 "" H 10350 1150 50  0001 C CNN
+F 3 "~" H 10350 1150 50  0001 C CNN
+	1    10350 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+BATT #PWR?
+U 1 1 5F1880E1
+P 8700 1150
+F 0 "#PWR?" H 8700 1000 50  0001 C CNN
+F 1 "+BATT" H 8715 1323 50  0000 C CNN
+F 2 "" H 8700 1150 50  0001 C CNN
+F 3 "" H 8700 1150 50  0001 C CNN
+	1    8700 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F188BA8
+P 8700 1250
+F 0 "#PWR?" H 8700 1000 50  0001 C CNN
+F 1 "GND" H 8705 1077 50  0000 C CNN
+F 2 "" H 8700 1250 50  0001 C CNN
+F 3 "" H 8700 1250 50  0001 C CNN
+	1    8700 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F188E4C
+P 10150 1250
+F 0 "#PWR?" H 10150 1000 50  0001 C CNN
+F 1 "GND" H 10155 1077 50  0000 C CNN
+F 2 "" H 10150 1250 50  0001 C CNN
+F 3 "" H 10150 1250 50  0001 C CNN
+	1    10150 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VSOLAR #PWR?
+U 1 1 5F18A31C
+P 10150 1150
+F 0 "#PWR?" H 10150 1000 50  0001 C CNN
+F 1 "VSOLAR" H 10165 1323 50  0000 C CNN
+F 2 "" H 10150 1150 50  0001 C CNN
+F 3 "" H 10150 1150 50  0001 C CNN
+	1    10150 1150
+	1    0    0    -1  
+$EndComp
+$Sheet
+S 1500 4800 1400 1400
+U 5F18B9BE
+F0 "Sensors and actuators" 50
+F1 "sensors_and_actuators.sch" 50
+$EndSheet
+$Sheet
+S 7400 3250 1400 1150
+U 5F19B71B
+F0 "Interfaces" 50
+F1 "interfaces.sch" 50
+F2 "usb_d+" B R 8800 3400 50 
+F3 "usb_d-" B R 8800 3500 50 
+$EndSheet
+$Comp
+L Connector:USB_B_Micro J?
+U 1 1 5F19E94A
+P 8850 2100
+F 0 "J?" H 8907 2567 50  0000 C CNN
+F 1 "USB_B_Micro" H 8907 2476 50  0000 C CNN
+F 2 "" H 9000 2050 50  0001 C CNN
+F 3 "~" H 9000 2050 50  0001 C CNN
+	1    8850 2100
+	1    0    0    -1  
+$EndComp
+NoConn ~ 9150 2300
+$Comp
+L power:GND #PWR?
+U 1 1 5F19E955
+P 8750 2600
+F 0 "#PWR?" H 8750 2350 50  0001 C CNN
+F 1 "GND" H 8755 2427 50  0000 C CNN
+F 2 "" H 8750 2600 50  0001 C CNN
+F 3 "" H 8750 2600 50  0001 C CNN
+	1    8750 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8750 2500 8750 2550
+Wire Wire Line
+	8750 2550 8850 2550
+Wire Wire Line
+	8850 2550 8850 2500
+Connection ~ 8750 2550
+Wire Wire Line
+	8750 2550 8750 2600
+$Comp
+L power:VBUS #PWR?
+U 1 1 5F19EF28
+P 9400 1900
+F 0 "#PWR?" H 9400 1750 50  0001 C CNN
+F 1 "VBUS" H 9415 2073 50  0000 C CNN
+F 2 "" H 9400 1900 50  0001 C CNN
+F 3 "" H 9400 1900 50  0001 C CNN
+	1    9400 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9150 1900 9400 1900
+Wire Wire Line
+	8800 3500 9300 3500
+Wire Wire Line
+	9300 3500 9300 2200
+Wire Wire Line
+	9300 2200 9150 2200
+Wire Wire Line
+	8800 3400 9450 3400
+Wire Wire Line
+	9450 3400 9450 2100
+Wire Wire Line
+	9450 2100 9150 2100
+$EndSCHEMATC
