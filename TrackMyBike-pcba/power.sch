@@ -485,39 +485,11 @@ $EndComp
 Wire Wire Line
 	5000 1800 5250 1800
 Text Notes 4650 1000 0    50   ~ 0
-Connecting VBUS will shut off solar regulator.\nBy default, VBUS is disconnected so that the \ngate is pulled down and the MOSFET is OFF. \nIn this case XSHUT should be pulled up by VSOLAR  (if present) \nso that SPV1040 is turned on. 
-$Comp
-L Device:R R?
-U 1 1 5F2B803A
-P 5850 1500
-F 0 "R?" V 5950 1550 50  0000 R CNN
-F 1 "100K" V 5750 1600 50  0000 R CNN
-F 2 "" V 5780 1500 50  0001 C CNN
-F 3 "~" H 5850 1500 50  0001 C CNN
-	1    5850 1500
-	0    -1   1    0   
-$EndComp
+Connecting VBUS will shut off solar regulator.\nBy default, VBUS is disconnected so that the \ngate is pulled down and the MOSFET is OFF. \nIn this case XSHUT should be pulled up by MPP-SET  (if present) \nso that SPV1040 is turned on. 
 Wire Wire Line
 	5000 1400 5000 1800
 Wire Wire Line
 	5550 1250 5550 1500
-$Comp
-L power:VSOLAR #PWR?
-U 1 1 5F2BFF02
-P 6300 1400
-AR Path="/5F2BFF02" Ref="#PWR?"  Part="1" 
-AR Path="/5F16A6AE/5F2BFF02" Ref="#PWR?"  Part="1" 
-F 0 "#PWR?" H 6300 1250 50  0001 C CNN
-F 1 "VSOLAR" H 6315 1573 50  0000 C CNN
-F 2 "" H 6300 1400 50  0001 C CNN
-F 3 "" H 6300 1400 50  0001 C CNN
-	1    6300 1400
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6300 1400 6300 1500
-Wire Wire Line
-	6300 1500 6000 1500
 Wire Wire Line
 	5700 1500 5550 1500
 Connection ~ 5550 1500
@@ -920,4 +892,19 @@ Wire Notes Line
 	2450 800  2450 2000
 Text Notes 1300 1650 0    50   ~ 0
 V(oc) < VBATT(max)
+Text Label 1700 3300 0    50   ~ 0
+MPP-SET
+Text Label 6000 1500 0    50   ~ 0
+MPP-SET
+$Comp
+L Device:R R?
+U 1 1 5F2C64B2
+P 5850 1500
+F 0 "R?" V 5750 1450 50  0000 R CNN
+F 1 "0R" V 5750 1650 50  0000 R CNN
+F 2 "" V 5780 1500 50  0001 C CNN
+F 3 "~" H 5850 1500 50  0001 C CNN
+	1    5850 1500
+	0    -1   1    0   
+$EndComp
 $EndSCHEMATC
