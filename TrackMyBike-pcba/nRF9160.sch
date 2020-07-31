@@ -14,7 +14,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L TrackMyBike-pcba-rescue:NRF9160-SICA-R-NRF9160-SICA-R U?
+L NRF9160-SICA-R:NRF9160-SICA-R U?
 U 1 1 5F168AEC
 P 5600 3650
 AR Path="/5F168AEC" Ref="U?"  Part="1" 
